@@ -7,14 +7,13 @@ import java.awt.*;
 import java.util.ArrayList;
 
 
-public class gui {
+public class gui{
 
     public static void main(String[] args){
         // frame settings
-        JFrame frame = new JFrame("My First GUI");
+        JFrame frame = new JFrame("My Testing Frame");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600,400);
-        frame.setBackground(new Color(100,100,125));
+        frame.setSize(800,600);
         frame.setResizable(true);
 
         // Panel for tab buttons
@@ -44,11 +43,12 @@ public class gui {
         for (EntryData entry:EntryData.ENTRIES){
             entryList.add(new Entry(entry.ICON_PATH,entry.TITLE,entry.DESCRIPTION));
         }
-        entryList.get(0).setBorder(new LineBorder(new Color(255,0,0),6));
-        entryList.get(1).setBorder(new LineBorder(new Color(0,255,0),6));
-        entryList.get(2).setBorder(new LineBorder(new Color(0,0,255),6));
+        entryList.get(0).setBorder(new LineBorder(new Color(255, 127, 127),3));
+        entryList.get(1).setBorder(new LineBorder(new Color(152,255, 157),3));
+        entryList.get(2).setBorder(new LineBorder(new Color(104, 101,255),3));
         for (int i = 0; i < entryList.size(); i++){
             mainPanel.add(entryList.get(i));
+            mainPanel.add(Box.createRigidArea(new Dimension(0,10)));
         }
 
         // add everything to the frame
@@ -57,5 +57,9 @@ public class gui {
 
         // draw the frame
         frame.setVisible(true);
+
+        //if(buttons[0].){
+
+        //}
     }
 }
